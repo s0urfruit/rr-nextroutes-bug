@@ -1,12 +1,8 @@
 import { Outlet, Link } from "@remix-run/react";
-import { cookieStorage } from "~/lib/auth/session.server"
 import { redirect, json } from "@remix-run/node";
 
 export async function loader({ request }) {
-	let session = await cookieStorage.getSession(request.headers.get("cookie"))
-	let data = session.get("user")
-	if (!data) return redirect("/login")
-	return data     
+	return {}     
 }
 
 export default function DashboardLayout() {
