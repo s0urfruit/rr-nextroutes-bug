@@ -17,11 +17,11 @@ Remix Vite plugin not found in Vite config
 The following error is a bug in React Router; please open an issue!
 https://github.com/remix-run/react-router/issues/new/choose
 Route config in "routes.js" is invalid.```
+```
 
 This occurs *after* running `npx npm-check-updates -u` on the default Remix project. It updated some of the packages and Remix began listening to future flags (v3).
 
 _See the full stack trace:_
-
 ```
 sourfruit@occupymars contiguity-web % npm run dev
 
