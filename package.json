@@ -1,0 +1,41 @@
+{
+  "name": "rr-reprod",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "npx remix vite:build",
+    "dev": "npx remix vite:dev --port 3000"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@remix-run/node": "2.16.4",
+    "@remix-run/react": "2.16.4",
+    "@remix-run/route-config": "^2.16.4",
+    "@remix-run/server-runtime": "2.16.4",
+    "@remix-run/v1-route-convention": "^0.1.4",
+    "@stripe/react-stripe-js": "^3.6.0",
+    "@stripe/stripe-js": "^7.0.0",
+    "@vercel/remix": "2.15.3",
+    "dotenv": "^16.4.7",
+    "isbot": "^5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remix-auth": "^4.1.0",
+    "remix-auth-github": "^3.0.2",
+    "rr-next-routes": "^0.0.8",
+    "stripe": "^18.0.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "2.16.4",
+    "@remix-run/eslint-config": "2.16.4",
+    "@remix-run/routes-option-adapter": "^2.16.4",
+    "@remix-run/serve": "^2.16.4",
+    "eslint": "^9.23.0",
+    "remix-flat-routes": "^0.8.5",
+    "vite": "^6.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
