@@ -1,9 +1,7 @@
 import { redirect } from "@remix-run/node"
-import { cookieStorage } from "~/lib/auth/session.server"
 
 export async function loader({ request }) {
-	let session = await cookieStorage.getSession(request.headers.get("cookie"))
-	let user = session.get("user")
+	const user = true
 	
 	if (user) {
 		return redirect("/dashboard")
