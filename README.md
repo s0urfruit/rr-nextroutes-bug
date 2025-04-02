@@ -44,3 +44,15 @@ Error:
     at updateRemixPluginContext (/Users/sourfruit/Desktop/PROJECTS/contiguity-web/node_modules/@remix-run/dev/dist/vite/plugin.js:374:9)
 
 ```
+
+---
+
+## Missing
+- lib/
+- - _server pages for remix-auth_
+- pages/auth/
+- - _these were just routes for github oauth_
+
+I removed any logic referencing them to make the example run-able.
+
+
