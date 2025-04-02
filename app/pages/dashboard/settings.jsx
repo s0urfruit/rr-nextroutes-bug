@@ -1,12 +1,8 @@
 import { json, redirect } from "@remix-run/node";
 import { useLoaderData, Link, Outlet } from "@remix-run/react";
-import { cookieStorage } from "~/lib/auth/session.server"
 
 export async function loader({ request }) {
-	let session = await cookieStorage.getSession(request.headers.get("cookie"))
-	let data = session.get("user")
-	if (!data) return redirect("/login")
-	return json({ data })
+	return {}
 }
 
 // error boundary
@@ -16,7 +12,7 @@ export function ErrorBoundary({ error }) {
 }
 
 export default function DashboardSettings() {
-	const { data } = useLoaderData()
+	const data = useLoaderData()
 
 	return (
 		<>
@@ -25,17 +21,6 @@ export default function DashboardSettings() {
 
 			<div className="settings-section">
 				<h2>Profile Information</h2>
-				<div className="form-group">
-					<label>Name</label>
-					<input type="text" defaultValue={data.session.user.name} />
-				</div>
-
-				<div className="form-group">
-					<label>Email</label>
-					<input type="email" defaultValue={data.session.user.email} />
-				</div>
-
-				<button className="btn btn-primary">Update Profile</button>
 			</div>
 
 			<div className="settings-section">
